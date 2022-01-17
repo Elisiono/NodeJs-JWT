@@ -1,5 +1,5 @@
-const post = require('')
-const usuarios =require('')
+const post = require('./src/posts')
+const usuarios =require('./src/usuarios')
 
 module.exports = app => {
     app.get('/', (res,req)=> {res.send('Olá pessoal')})

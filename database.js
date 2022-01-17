@@ -1,13 +1,13 @@
 const sqlite3 = require('sqlite3').verbose()
-const db = sqlite3.Database('db.sqlite')
+const db = new sqlite3.Database('db.sqlite')
 
-const POST_SCHEMA =`CREATE TABLE IF NOT EXIST posts (
+const POST_SCHEMA =`CREATE TABLE IF NOT EXISTS posts (
     id INTEGER PRIMARY KEY AUTOINCREMENT, 
     titulo VARCHAR(50) NOT NULL,
     conteudo VARCHAR(140)
     )`
 
-const USUARIOS_SCHEMA =`CREATE TABLE IF NOT EXIST usuario (
+const USUARIOS_SCHEMA =`CREATE TABLE IF NOT EXISTS usuario (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     nome VARCHAR(40) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
