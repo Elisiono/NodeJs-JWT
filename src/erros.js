@@ -1,18 +1,18 @@
-class InvalidArgumentError extends Error{
-    constructor(mensagem){
-        super(mensagem)
-        this.name = 'InvalidArgumentError'
-    }
+class InvalidArgumentError extends Error {
+  constructor(mensagem) {
+    super(mensagem);
+    this.name = 'InvalidArgumentError';
+  }
 }
 
 class InternalServerError extends Error {
-    constructor(mensagem){
-        super(mensagem)
-        this.name = 'InternalServerError'
-    }
+  constructor(mensagem) {
+    super(mensagem);
+    this.name = 'InternalServerError';
+  }
 }
 
 module.exports = {
-    InvalidArgumentError: InvalidArgumentError,
-    InternalServerError: InternalServerError
-}
+  InvalidArgumentError: InvalidArgumentError,
+  InternalServerError: InternalServerError
+};
