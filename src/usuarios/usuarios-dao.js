@@ -24,6 +24,7 @@ module.exports = {
         })
     },
     buscaPorId: id =>{
+        return new Promise((resolve, reject) =>{
         db.get(
             `
                 SELECT * FROM usuarios WHERE id = ?
